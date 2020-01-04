@@ -1,0 +1,30 @@
+﻿<Page x:Class="Debt.Page_Download"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Debt"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="500"
+      Title="Page_Download">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" Style="{DynamicResource Sty_Dol_Left}">
+            <Button Content="上传记录" Style="{DynamicResource Sty_Btn}"/>
+            <Button Content="下载记录" Style="{DynamicResource Sty_Btn}"/>
+        </DockPanel>
+        <DockPanel Style="{DynamicResource Sty_Dol_Right}">
+            <Button Content="全部清除" Style="{DynamicResource Sty_Btn}"/>
+        </DockPanel>
+        <DataGrid Grid.Row="1">
+        </DataGrid>
+        <DockPanel Grid.Row="2" Style="{DynamicResource Sty_Dol_Right}">
+            <Label Name="Lab_Count" Content="0项" Style="{DynamicResource Sty_Label}"/>
+        </DockPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,45 @@
+﻿<Window x:Class="Debt.Page_File"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Debt"
+        mc:Ignorable="d"
+        Title="File_Transfer" Height="450" Width="620" WindowStyle="None" WindowStartupLocation="CenterScreen" MinWidth="620" MinHeight="450"
+        Loaded="Window_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Canvas Grid.Row="0" Height="25" Background="LightBlue" MouseLeftButtonDown="Heading_MouseLeftButtonDown"/>
+        <Canvas Grid.Row="1" Height="25" Background="Wheat" VerticalAlignment="Top"/>
+        <Canvas Grid.Row="1" Height="25" Background="DarkCyan" VerticalAlignment="Bottom"/>
+
+        <DockPanel Style="{DynamicResource Sty_Dol_Left}">
+            <Button Content="上传" Name="Btn_Upload_Ctl" Click="Btn_Upload_Ctl_Click" Style="{DynamicResource Sty_Btn}"/>
+            <Button Content="查看" Name="Btn_View_Ctl" Click="Btn_View_Ctl_Click" Style="{DynamicResource Sty_Btn}"/>
+            <Button Content="历史记录" Name="Btn_Download_Ctl" Click="Btn_Download_Ctl_Click" Style="{DynamicResource Sty_Btn}"/>
+        </DockPanel>
+        <DockPanel Grid.Row="0" Style="{DynamicResource Sty_Dol_Right}">
+            <Button Name="Btn_Skin" ToolTip="自定义皮肤" Style="{DynamicResource Sty_Btn}" Click="Btn_Skin_Click">
+                <Image Source="E:/Vs_Sln/Debt/Debt/Image/Icon_Skin.png" Stretch="Uniform"></Image>
+            </Button>
+            <Button Name="Btn_Min" ToolTip="最小化" Style="{DynamicResource Sty_Btn}" Click="Btn_Min_Click">
+                <Image Source="E:/Vs_Sln/Debt/Debt/Image/Icon_Min.png" Stretch="Uniform"></Image>
+            </Button>
+            <Button Name="Btn_Max" ToolTip="最大化" Style="{DynamicResource Sty_Btn}" Click="Btn_Max_Click">
+                <Image Source="E:/Vs_Sln/Debt/Debt/Image/Icon_Max.png" Stretch="Uniform"></Image>
+            </Button>
+            <Button Name="Btn_Close" ToolTip="关闭" Style="{DynamicResource Sty_Btn}" Click="Btn_Close_Click">
+                <Image Source="E:/Vs_Sln/Debt/Debt/Image/Icon_Close.png" Stretch="Uniform"></Image>
+            </Button>
+        </DockPanel>
+
+        <Grid Grid.Row="1">
+            <ContentControl Name="Dynamic_Page"/>
+        </Grid>
+    </Grid>
+</Window>
