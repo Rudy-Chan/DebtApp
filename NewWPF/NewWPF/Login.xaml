@@ -1,0 +1,80 @@
+﻿<Window x:Class="NewWPF.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:NewWPF"
+        mc:Ignorable="d"
+        Title="Login" Height="375" Width="710" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="Transparent" Loaded="UI_Loaded">
+    <Canvas Name="canvas">
+        <Grid Margin="180,0" Width="300" MouseMove="Grid_MouseMove" Height="375">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.RowSpan="4" BorderBrush="Gray" MouseMove="Grid_MouseMove" BorderThickness="3" CornerRadius="20"  Background="White" />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
+
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Height="20" Width="20" Click="Btn_IpSet_Click" Foreground="Gray"  Background="{x:Null}" BorderBrush="{x:Null}" >
+                    <materialDesign:PackIcon Kind="SettingsOutline" />
+                </Button>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Height="20" Width="20" Click="Min_Clock" Foreground="Gray"  Background="{x:Null}" BorderBrush="{x:Null}" >
+                    <materialDesign:PackIcon Kind="WindowMinimize" />
+                </Button>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Height="20" Width="Auto"  Click="Close_Click" Foreground="Gray"  Background="{x:Null}" BorderBrush="{x:Null}">
+                    <materialDesign:PackIcon Kind="WindowClose" />
+                </Button>
+            </StackPanel>
+
+            <ComboBox x:FieldModifier="public" x:Name="Cbx_User" HorizontalAlignment="Center" VerticalAlignment="Top" Width="183" Height="32" IsEditable="True" Background="White"
+                      BorderBrush="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" FontSize="14.667" VerticalContentAlignment="Center" TextSearch.TextPath="Name"
+                      TextOptions.TextFormattingMode="Display" TabIndex="0" DropDownClosed="Cbx_User_DropDownClosed"  Grid.Row="2" Margin="60,0,57,0">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="190" Height="30">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="170"></ColumnDefinition>
+                                <ColumnDefinition Width="20"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Name="Tb_User" Grid.Column="0" VerticalAlignment="Center" Text="{Binding Path=id}" Foreground="Black" Background="Transparent"/>
+                            <Button Grid.Column="1" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="20" Height="20" Tag="{Binding id}" Click="DeleteButton_Click" Content="x" />
+                        </Grid>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Bottom">
+                <Button Name="Btn_Login" HorizontalAlignment="Left" Background="Transparent" Cursor="Hand" BorderThickness="0" Height="39" Width="90" Click="login">
+                    <Image Name="Img_Enter" VerticalAlignment="Center"  Height="34" Source="/NewWPF;component/Resources/登录.png" Stretch="Fill" Grid.Row="3" Width="58" />
+                </Button>
+                <Button Panel.ZIndex="1" Name="Btn_Reset" HorizontalAlignment="Left" Background="Transparent" Cursor="Hand" BorderThickness="0" Height="39" Width="90" Click="Btn_Reset_Click">
+                    <Image Name="Img_Reset" VerticalAlignment="Center" Source="Resources/重置.png" Height="34" Stretch="Fill" Grid.Row="3" Width="58"/>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30">
+                <Image Grid.Row="1"  VerticalAlignment="Top"   Height="42" Source="/NewWPF;component/Resources/logo.png"/>
+                <Label Content="集团债务平台" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="SimSun" FontWeight="Bold" Grid.Row="1" Margin="0,5"/>
+            </StackPanel>
+
+            <Label Content="武汉科技大学" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="3"/>
+
+            <StackPanel x:Name="IPSET" Visibility="Hidden" Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,0,0">
+                <Label Content="IP :" FontSize="15" VerticalContentAlignment="Center" Height="26"/>
+                <TextBox x:Name="Tbx_IPset" Text="192.168.111.123" Height="26" VerticalContentAlignment="Center" TextWrapping="Wrap" Width="99"/>
+                <Button Name="Btn_IpOk" Background="Transparent" Cursor="Hand" Click="Btn_Ip_Click" BorderThickness="0" Width="65">
+                    <Image Name="Img_IpOk"  Height="22" Source="/NewWPF;component/Resources/IPok.png" Stretch="Fill" Width="32"/>
+                </Button>
+            </StackPanel>
+
+            <Canvas Grid.Row="2" HorizontalAlignment="Left" Margin="0,50">
+                <local:SoftKeyboardForPwd x:Name="softkeyboard" Grid.Row="1" VerticalAlignment="Bottom" Margin="58.5,0"/>
+            </Canvas>
+        </Grid>
+    </Canvas>
+</Window>

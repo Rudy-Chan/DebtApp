@@ -1,0 +1,283 @@
+﻿<Window x:Class="NewWPF.Input"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:NewWPF"
+        mc:Ignorable="d"
+        Title="Input" Height="400" Width="1100">
+    <Grid>
+        <TabControl>
+            <TabItem Header="借款录入">
+                <Border Background="White">
+                    <Grid Height="300">
+
+                        <TextBox materialDesign:HintAssist.Hint="automatically created." IsEnabled="False"  x:Name="jk_TextBox_debtId" IsReadOnly="False"  HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="130,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="131"/>
+                        <Label Content="借款编号：" FontSize="12" HorizontalAlignment="Left" Margin="40,30,0,0" Height="30" VerticalAlignment="Top"/>
+                        <Label Content="借款单位：" FontSize="12" HorizontalAlignment="Left" Margin="40,70,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="0.557,0.067"/>
+                        <ComboBox HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="130,70,0,0" Width="130" Name="comboBoxJKDW" VerticalAlignment="Top"  ></ComboBox>
+
+                        <TextBox  x:Name="jk_TextBox_amount" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="130,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="131"/>
+                        <Label Content="借款金额：" FontSize="12"
+                                   HorizontalAlignment="Left" Margin="40,150,0,0" Height="30" VerticalAlignment="Top"/>
+
+                        <Label Content="借款类型：" FontSize="12" HorizontalAlignment="Left" Margin="40,190,0,0" Height="30" VerticalAlignment="Top"/>
+                        <ComboBox HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="130,190,0,0" Width="130" Name="comboBoxJKLX" VerticalAlignment="Top"  ></ComboBox>
+                        <Label Content="借贷利率：" FontSize="12" HorizontalAlignment="Left" Margin="300,30,0,0" Height="30" VerticalAlignment="Top"/>
+                        <TextBox x:Name="jk_TextBox_interest" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="370,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" RenderTransformOrigin="-0.047,0.45"/>
+                        <DatePicker x:Name="jk_DatePicker_debtStartTime" Height="29" HorizontalAlignment="Left"  VerticalAlignment="Top"  Width="130"  Margin="370,70,0,0"  SelectedDate="{x:Static sys:DateTime.Now}">
+                            <DatePicker.Resources>
+                                <Style TargetType="DatePickerTextBox">
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate>
+                                                <TextBox x:Name="PART_TextBox" Text="{Binding Path=SelectedDate, StringFormat={}{0:yyyy年MM月dd日}, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" />
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </DatePicker.Resources>
+                        </DatePicker>
+                        <Label Content="起贷日期：" FontSize="12" HorizontalAlignment="Left" Margin="300,70,0,0" Height="30" VerticalAlignment="Top"/>
+
+
+                        <DatePicker x:Name="jk_DatePicker_debtEndTime" Height="29" HorizontalAlignment="Left"  VerticalAlignment="Top"  Width="130"  Margin="370,110,0,0"  SelectedDate="{x:Static sys:DateTime.Now}">
+                            <DatePicker.Resources>
+                                <Style TargetType="DatePickerTextBox">
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate>
+                                                <TextBox x:Name="PART_TextBox2" Text="{Binding Path=SelectedDate, StringFormat={}{0:yyyy年MM月dd日}, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" />
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </DatePicker.Resources>
+                        </DatePicker>
+                        <Label Content="清贷日期：" FontSize="12" HorizontalAlignment="Left" Margin="300,110,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="-0.514,0"/>
+
+                        <Label Content="关联银行：" FontSize="12" HorizontalAlignment="Left" Margin="300,190,0,0" Height="30" VerticalAlignment="Top"/>
+                        <ComboBox HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="370,190,0,0" Width="130" Name="comboBoxGLYH" VerticalAlignment="Top"  ></ComboBox>
+
+
+                        <Label Content="借贷机构：" FontSize="12" HorizontalAlignment="Left" Margin="40,110,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="-0.7,0.9"/>
+                        <ComboBox HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="130,110,0,0" Width="130" Name="comboBoxJDJG" VerticalAlignment="Top"  ></ComboBox>
+
+                        <ComboBox HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="630,70,0,0" Width="130" Name="comboBoxQXFL" VerticalAlignment="Top" >
+                        </ComboBox>
+
+                        <Label Content="期限分类：" FontSize="12" HorizontalAlignment="Left" Margin="560,70,0,0" Height="30" VerticalAlignment="Top"/>
+
+
+                        <ComboBox x:Name="comboBoxZXFS" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="630,110,0,0" Width="130" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
+                        </ComboBox>
+                        <Label Content="增信方式：" FontSize="12" HorizontalAlignment="Left" Margin="560,110,0,0" Height="30" VerticalAlignment="Top"/>
+
+
+                        <ComboBox HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="630,150,0,0" Width="130" Name="comboBoxLLTZMC" VerticalAlignment="Top"  >
+
+                        </ComboBox>
+
+
+                        <Label Content="政府债务系统：" FontSize="12" HorizontalAlignment="Left" Margin="536,190,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="0.511,-0.9"/>
+                        <ToggleButton x:Name="isInGov"
+  Style="{StaticResource MaterialDesignSwitchToggleButton}"
+  ToolTip="MaterialDesignSwitchToggleButton"
+  IsChecked="False" Margin="631,190,320,80"/>
+                        <Label Content="利率调整方式：" FontSize="12" HorizontalAlignment="Left" Margin="536,150,0,0" Height="30" VerticalAlignment="Top"/>
+
+
+                        <ComboBox HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="630,30,0,0" Width="130" Name="comboBoxFDLLXS" VerticalAlignment="Top" RenderTransformOrigin="0.453,1.8"   >
+
+                        </ComboBox>
+
+                        <Label Content="浮动利率系数：" FontSize="12" HorizontalAlignment="Left" Margin="536,30,0,0" Height="30" VerticalAlignment="Top"/>
+
+                        <Label Content="还款方式：" FontSize="12" HorizontalAlignment="Left" Margin="300,150,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="0.314,0.567"/>
+
+
+                        <ComboBox HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="370,150,0,0" Width="130" Name="comboBoxFKFS" VerticalAlignment="Top" RenderTransformOrigin="0.453,1.8"   >
+
+                        </ComboBox>
+                        <Label Content="备注：" FontSize="12" HorizontalAlignment="Left" Margin="781,30,0,0" Height="30" VerticalAlignment="Top"/>
+                        <TextBox x:Name="remark1" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Margin="805,65,50,0" Height="150"   VerticalAlignment="Top" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"  materialDesign:HintAssist.Hint="请写入备注信息。" IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextFieldTextBoxEnabledComboBox}" Text="" />
+                    </Grid>
+                </Border>
+            </TabItem>
+            <TabItem Header="借款变更录入">
+                <Border Background="White">
+                    <Grid Height="300">
+
+                        <TextBox  x:Name="jkbg_TextBox_loanChangeId" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="114,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="131" FontFamily="SimSun"/>
+                        <Label Content="借款变更编号：" FontSize="12" HorizontalAlignment="Left" Margin="16,30,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="0.452,1.867"/>
+
+                        <Label Content="借款编号：" FontSize="12" HorizontalAlignment="Left" Margin="40,70,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="0.557,0.067"/>
+                        <TextBox  x:Name="jkbg_TextBox_debtId" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="115,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="131" FontFamily="SimSun"/>
+
+                        <TextBox  x:Name="jkbg_TextBox_amount" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="115,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130"/>
+                        <Label Content="金额：" FontSize="12"
+                                   HorizontalAlignment="Left" Margin="64,190,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="-0.065,0.2"/>
+
+
+                        <TextBox  x:Name="jkbg_TextBox_payTypeName" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="370,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.419,3.28" FontFamily="SimSun"/>
+                        <Label Content="支付方式：" FontSize="12"
+                                   HorizontalAlignment="Left" Margin="300,70,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="-0.065,0.2"/>
+
+
+                        <DatePicker x:Name="jkbg_DatePicker_changeDate" Height="29" HorizontalAlignment="Left"  VerticalAlignment="Top"  Width="130"  Margin="115,110,0,0"  SelectedDate="{x:Static sys:DateTime.Now}">
+                            <DatePicker.Resources>
+                                <Style TargetType="DatePickerTextBox">
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate>
+                                                <TextBox x:Name="jkbg_TextBox_Time" Text="{Binding Path=SelectedDate, StringFormat={}{0:yyyy年MM月dd日}, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" />
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </DatePicker.Resources>
+                        </DatePicker>
+                        <Label Content="变更日期：" FontSize="12" HorizontalAlignment="Left" Margin="40,110,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="1.171,0.633"/>
+
+                        <DatePicker x:Name="jkbg_DatePicker_endDate" Height="29" HorizontalAlignment="Left"  VerticalAlignment="Top"  Width="130"  Margin="370,30,0,0"  SelectedDate="{x:Static sys:DateTime.Now}" RenderTransformOrigin="0.431,1.792">
+                            <DatePicker.Resources>
+                                <Style TargetType="DatePickerTextBox">
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate>
+                                                <TextBox x:Name="jkbg_TextBox_Time2" Text="{Binding Path=SelectedDate, StringFormat={}{0:yyyy年MM月dd日}, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" />
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </DatePicker.Resources>
+                        </DatePicker>
+                        <Label Content="终贷日期：" FontSize="12" HorizontalAlignment="Left" Margin="300,30,0,0" Height="25" VerticalAlignment="Top" RenderTransformOrigin="1.171,0.633"/>
+                        <Label Content="更新利率：" FontSize="12" HorizontalAlignment="Left" Margin="40,150,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="0.386,1.817"/>
+                        <TextBox x:Name="jkbg_TextBox_interest" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="115,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" RenderTransformOrigin="-0.047,0.45" FontFamily="SimSun"/>
+
+                        <Label Content="变更说明：" FontSize="12" HorizontalAlignment="Left" Margin="560,30,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="1.086,0.5"/>
+                        <TextBox x:Name="remark2" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Margin="600,65,270,0" Height="150"   VerticalAlignment="Top" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"  materialDesign:HintAssist.Hint="请写入备注信息。" IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextFieldTextBoxEnabledComboBox}" Text="" />
+
+                    </Grid>
+                </Border>
+            </TabItem>
+            <TabItem Header="还款录入">
+                <Border Background="White">
+                    <Grid Height="300">
+                        <TextBox   x:Name="fklr_TextBox_paymentId" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="112,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" FontFamily="SimSun"/>
+                        <Label Content="付款编号：" FontSize="12" HorizontalAlignment="Left" Margin="40,30,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="0.393,1.417" Width="70"/>
+
+                        <Label Content="借款编号：" FontSize="12" HorizontalAlignment="Left" Margin="40,150,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="0.557,0.067" Width="70"/>
+                        <TextBox  x:Name="fklr_TextBox_debtId" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="112,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" RenderTransformOrigin="1.046,0.65"/>
+
+                        <TextBox  x:Name="fklr_TextBox_amount" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="112,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130"/>
+                        <Label Content="金额：" FontSize="12"
+                                   HorizontalAlignment="Left" Margin="64,190,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="-0.065,0.2" Width="46"/>
+
+
+                        <DatePicker x:Name="fklr_DatePicker_receiveDate" Height="29" HorizontalAlignment="Left"  VerticalAlignment="Top"  Width="130"  Margin="112,110,0,0"  SelectedDate="{x:Static sys:DateTime.Now}">
+                            <DatePicker.Resources>
+                                <Style TargetType="DatePickerTextBox">
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate>
+                                                <TextBox x:Name="fklr_TextBox_Time" Text="{Binding Path=SelectedDate, StringFormat={}{0:yyyy年MM月dd日}, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" />
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </DatePicker.Resources>
+                        </DatePicker>
+                        <Label Content="付款日期：" FontSize="12" HorizontalAlignment="Left" Margin="40,110,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="1.171,0.633" Width="70"/>
+
+                        <DatePicker  x:Name="fklr_DatePicker_operateDate" Height="29" HorizontalAlignment="Left"  VerticalAlignment="Top"  Width="130"  Margin="370,30,0,0"  SelectedDate="{x:Static sys:DateTime.Now}" RenderTransformOrigin="0.508,-0.125">
+                            <DatePicker.Resources>
+                                <Style TargetType="DatePickerTextBox">
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate>
+                                                <TextBox IsReadOnly="True" x:Name="fklr_TextBox_Time" Text="{Binding Path=SelectedDate, StringFormat={}{0:yyyy年MM月dd日}, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" />
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </DatePicker.Resources>
+                        </DatePicker>
+                        <Label Content="操作日期：" FontSize="12" HorizontalAlignment="Left" Margin="300,30,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="1.171,0.633" Width="70"/>
+
+                        <Label Content="银行凭单编号：" FontSize="12" HorizontalAlignment="Left" Margin="16,70,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="-1.703,0.117"/>
+                        <TextBox x:Name="fklr_TextBox_creditNotice" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="112,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" RenderTransformOrigin="-0.047,0.45"/>
+
+                        <Label Content="备注：" FontSize="12" HorizontalAlignment="Left" Margin="560,30,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="0.557,0.067" Width="46"/>
+                        <TextBox x:Name="remark3" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Margin="600,60,255,0" Height="150"   VerticalAlignment="Top" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"  materialDesign:HintAssist.Hint="请写入备注信息。" IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextFieldTextBoxEnabledComboBox}" Text="" />
+                    </Grid>
+                </Border>
+            </TabItem>
+            <TabItem Header="提款录入">
+                <Border Background="White">
+                    <Grid Height="300">
+
+                        <TextBox materialDesign:HintAssist.Hint="automatically created." IsEnabled="True" x:Name="SK_TextBox_receivedId" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="112,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.546,2.569" IsReadOnly="True"/>
+                        <Label Content="收款编号：" FontSize="12" HorizontalAlignment="Left" Margin="40,30,0,0" Height="35" VerticalAlignment="Top"/>
+
+                        <TextBox x:Name="SK_TextBox_debtId" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="112,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+                        <Label Content="借款单号：" FontSize="12" HorizontalAlignment="Left" Margin="40,70,0,0" Height="35" VerticalAlignment="Top"/>
+
+                        <TextBox x:Name="SK_TextBox_trackingNumber" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="112,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+                        <Label Content="银行凭单编号 ：" FontSize="12" HorizontalAlignment="Left" Margin="12,110,0,0" Height="35" VerticalAlignment="Top" RenderTransformOrigin="0.551,1.897"/>
+
+                        <TextBox x:Name="SK_TextBox_amountTransfered" HorizontalAlignment="Left" FontSize="12"  Height="29" Margin="112,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+                        <Label Content="还款金额：" FontSize="12"
+                                   HorizontalAlignment="Left" Margin="40,150,0,0" Height="35" VerticalAlignment="Top"/>
+
+                        <DatePicker x:Name="SK_DatePicker_receiveDate" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="29"  Width="150"  Margin="112,190,0,0"  SelectedDate="{x:Static sys:DateTime.Now}" RenderTransformOrigin="0.546,0.53">
+                            <DatePicker.Resources>
+                                <Style TargetType="DatePickerTextBox">
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate>
+                                                <TextBox x:Name="PART_TextBox" Text="{Binding Path=SelectedDate, StringFormat={}{0:yyyy年MM月dd日}, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" />
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </DatePicker.Resources>
+                        </DatePicker>
+                        <Label Content="收款日期：" FontSize="12" HorizontalAlignment="Left" Margin="40,190,0,0" Height="35" VerticalAlignment="Top"/>
+
+
+                        <DatePicker x:Name="SK_DatePicker_operationDate" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="29"  Width="150"  Margin="370,30,0,0"  SelectedDate="{x:Static sys:DateTime.Now}" RenderTransformOrigin="0.546,0.53">
+                            <DatePicker.Resources>
+                                <Style TargetType="DatePickerTextBox">
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate>
+                                                <TextBox x:Name="PART_TextBox" IsReadOnly="True" Text="{Binding Path=SelectedDate, StringFormat={}{0:yyyy年MM月dd日}, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" />
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </DatePicker.Resources>
+                        </DatePicker>
+                        <Label Content="操作日期：" FontSize="12" HorizontalAlignment="Left" Margin="300,30,0,0" Height="35" VerticalAlignment="Top"/>
+
+
+                        <Label Content="备注：" FontSize="12" HorizontalAlignment="Left" Margin="560,30,0,0" Height="30" VerticalAlignment="Top" RenderTransformOrigin="0.557,0.067"/>
+                        <TextBox x:Name="remark4" Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Margin="600,60,255,0" Height="150"   VerticalAlignment="Top" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"  materialDesign:HintAssist.Hint="请写入备注信息。" IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextFieldTextBoxEnabledComboBox}" Text="" />
+                    </Grid>
+                </Border>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
