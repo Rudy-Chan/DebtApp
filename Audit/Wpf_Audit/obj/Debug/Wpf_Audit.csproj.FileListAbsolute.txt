@@ -1,0 +1,209 @@
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\Wpf_Audit.exe.config
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.csprojResolveAssemblyReference.cache
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Win_Audit.g.cs
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\App.g.cs
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit_MarkupCompile.cache
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit_MarkupCompile.lref
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Pager.g.cs
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Page_Checked.g.cs
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\ProbarRotate.g.cs
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Page_Introduction.g.cs
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Page_NotChecked.g.cs
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\Wpf_Audit.exe
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\Wpf_Audit.pdb
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\Newtonsoft.Json.dll
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\System.Windows.Interactivity.dll
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\Newtonsoft.Json.xml
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\de\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\en\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\es\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\it\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Pager.baml
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Page_Checked.baml
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\ProbarRotate.baml
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Win_Audit.baml
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Page_Introduction.baml
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Page_NotChecked.baml
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.g.resources
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.Properties.Resources.resources
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.csproj.GenerateResource.Cache
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.exe
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.pdb
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Win_AuditDetail.g.cs
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Win_AuditDetail.baml
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.dll
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.xml
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\RollText.g.cs
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\RollText.baml
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Page_Changed.g.cs
+E:\Vs_Sln\Wpf_Audit\Wpf_Audit\obj\Debug\Page_Changed.baml
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\Wpf_Audit.exe.config
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.exe
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.pdb
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\Wpf_Audit.exe
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\Wpf_Audit.pdb
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.dll
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\Newtonsoft.Json.dll
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\System.Windows.Interactivity.dll
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.xml
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\Newtonsoft.Json.xml
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\de\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\en\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\es\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\it\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Pager.g.cs
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Page_Changed.g.cs
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Page_Checked.g.cs
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Page_Introduction.g.cs
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Page_NotChecked.g.cs
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\ProbarRotate.g.cs
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Win_Audit.g.cs
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\App.g.cs
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit_MarkupCompile.cache
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit_MarkupCompile.lref
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Pager.baml
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Page_Changed.baml
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Page_Checked.baml
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Page_Introduction.baml
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Page_NotChecked.baml
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\ProbarRotate.baml
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Win_Audit.baml
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.g.resources
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.Properties.Resources.resources
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.csproj.GenerateResource.Cache
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\RollCaption.g.cs
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\RollCaption.baml
+E:\Vs_Sln\Wpf_Audit 7.0\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.csprojResolveAssemblyReference.cache
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.pdb
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\Wpf_Audit.pdb
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\Newtonsoft.Json.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\System.Windows.Interactivity.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.xml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\Newtonsoft.Json.xml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\de\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\en\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\es\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\it\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Win_Audit.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit_MarkupCompile.cache
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit_MarkupCompile.lref
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Win_Audit.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.g.resources
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.Properties.Resources.resources
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.csproj.GenerateResource.Cache
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\Wpf_Audit.dll.config
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\Wpf_Audit.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\ExportAndImport.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\MaterialDesignColors.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\NPOI.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\NPOI.OOXML.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\NPOI.OpenXml4Net.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\NPOI.OpenXmlFormats.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\ICSharpCode.SharpZipLib.xml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\MaterialDesignColors.pdb
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\UserControl\Pager.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Page\Page_Changed.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Page\Page_Checked.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Page\Page_Introduction.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Page\Page_NotChecked.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Page\Page_OperationLog.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\UserControl\ProbarRotate.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\UserControl\RollCaption.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\UserControl\Pager.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Page\Page_Changed.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Page\Page_Checked.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Page\Page_Introduction.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Page\Page_NotChecked.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Page\Page_OperationLog.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\UserControl\ProbarRotate.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\UserControl\RollCaption.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\Wpf_Audit\obj\Debug\Wpf_Audit.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\Wpf_Audit.dll.config
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\Wpf_Audit.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\Wpf_Audit.pdb
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\MaterialDesignColors.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\Newtonsoft.Json.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\NPOI.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\NPOI.OOXML.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\NPOI.OpenXml4Net.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\NPOI.OpenXmlFormats.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\System.Windows.Interactivity.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\ICSharpCode.SharpZipLib.xml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\MaterialDesignColors.pdb
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.xml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\Newtonsoft.Json.xml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\de\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\en\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\es\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\it\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\UserControl\Pager.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Page\Page_Changed.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Page\Page_Checked.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Page\Page_Introduction.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Page\Page_NotChecked.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Page\Page_OperationLog.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\UserControl\ProbarRotate.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\UserControl\RollCaption.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Win_Audit.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Wpf_Audit_MarkupCompile.cache
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Wpf_Audit_MarkupCompile.lref
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\UserControl\Pager.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Page\Page_Changed.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Page\Page_Checked.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Page\Page_Introduction.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Page\Page_NotChecked.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Page\Page_OperationLog.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\UserControl\ProbarRotate.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\UserControl\RollCaption.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Win_Audit.baml
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Wpf_Audit.g.resources
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Wpf_Audit.Properties.Resources.resources
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Wpf_Audit.csproj.GenerateResource.Cache
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Wpf_Audit.dll
+E:\Vs_Sln\Wpf_Audit 2.0(稳定版)\Wpf_Audit\obj\Debug\Wpf_Audit.pdb
