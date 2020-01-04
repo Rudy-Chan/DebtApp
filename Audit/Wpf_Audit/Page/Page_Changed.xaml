@@ -1,0 +1,331 @@
+﻿<Page x:Class="Wpf_Audit.Page_Changed"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+      xmlns:local="clr-namespace:Wpf_Audit"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="600"
+      Title="Page_Changed">
+
+    <Page.Resources>
+        <XmlDataProvider x:Key="AllItem" />
+        <Style x:Key="dgCell" TargetType="{x:Type TextBlock}">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*" MinWidth="200"/>
+            <ColumnDefinition Width="3"/>
+            <ColumnDefinition Width="3*" MinWidth="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0">
+            <Label Content="起贷日期：" VerticalContentAlignment="Center" BorderBrush="Transparent" Background="Transparent"/>
+            <DatePicker Name="Dp_DebtStart" HorizontalAlignment="Left" Height="25" Width="100" VerticalAlignment="Top" ToolTip="显示该日期之后的记录"
+                        IsTodayHighlighted="True" SelectedDateChanged="Dp_SelectedDateChanged" Cursor="Hand"/>
+            <Label Content="终贷日期：" VerticalContentAlignment="Center" BorderBrush="Transparent" Background="Transparent"/>
+            <DatePicker Name="Dp_DebtEnd" HorizontalAlignment="Left" Height="25" Width="100" VerticalAlignment="Top" ToolTip="显示该日期之前的记录"
+                        IsTodayHighlighted="True" SelectedDateChanged="Dp_SelectedDateChanged" Cursor="Hand"/>
+            <Button Name="Btn_Export" Grid.Row="2" Grid.Column="1" Content="导出" Click="Btn_Export_Click"  Cursor="Hand" Foreground="Black"
+                    BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        </DockPanel>
+
+        <GridSplitter Grid.Column="1" Grid.RowSpan="3" HorizontalAlignment="Stretch" Background="Transparent" BorderThickness="0"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+
+            <DataGrid Name="Dg_Changed" Grid.Row="0" ItemsSource="{Binding FakeSource_Changed}" AutoGenerateColumns="False" CanUserAddRows="False" 
+                  Block.TextAlignment="Center" BorderBrush="Transparent" Background="Transparent" SelectionChanged="Dg_Changed_SelectionChanged"
+                      HorizontalGridLinesBrush="#FFF0EBEB" VerticalGridLinesBrush="#FFF0EBEB" AlternationCount="2" AlternatingRowBackground="AliceBlue">
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+                <DataGrid.Resources>
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="Height" Value="Auto" />
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="选择" Width="55">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox Name="Cb_Single" Tag="{Binding Path=rowIndex}" IsChecked="{Binding Path=checkBox_IsChecked}" Click="Cb_Single_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="借款编号" Binding="{Binding changeItem.debtId}" IsReadOnly="True" Width="1.5*" ElementStyle="{StaticResource ResourceKey=dgCell}"/>
+                    <DataGridTextColumn Header="变更用户" Binding="{Binding changeItem.realName}" IsReadOnly="True" Width="*" ElementStyle="{StaticResource ResourceKey=dgCell}"/>
+                    <DataGridTextColumn Header="金额/元" Binding="{Binding amount}" IsReadOnly="True" Width="*" ElementStyle="{StaticResource ResourceKey=dgCell}"/>
+                    <DataGridTextColumn Header="状态" Binding="{Binding status}" IsReadOnly="True" Width="*" ElementStyle="{StaticResource ResourceKey=dgCell}"/>
+                    <DataGridTemplateColumn Header="操作" Width="1.5*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Name="Btn_Pass" Content="通过" Tag="{Binding Path=rowIndex}" Margin="2,0" HorizontalAlignment="Left"
+                                        BorderBrush="Transparent" Background="Transparent" Foreground="Black" Click="Btn_Pass_Click"/>
+                                    <Button Name="Btn_Reject" Content="拒绝" Tag="{Binding Path=rowIndex}" Margin="2,0" HorizontalAlignment="Left"
+                                        BorderBrush="Transparent" Background="Transparent" Foreground="Black" Click="Btn_Reject_Click"/>
+                                    <Button Name="Btn_Save" Content="保存" Tag="{Binding Path=rowIndex}" Margin="2,0" HorizontalAlignment="Left"
+                                        BorderBrush="Transparent" Background="Transparent" Foreground="Black" Click="Btn_Save_Click"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Name="proBar" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Visibility="Hidden" Grid.RowSpan="2">
+                <local:ProbarRotate/>
+                <TextBlock Name="proBarText" Text="请稍候..." HorizontalAlignment="Center"/>
+            </StackPanel>
+            <Label Name="Lab_Empty" Content="没有记录" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" 
+                   Visibility="Hidden"/>
+
+            <local:Pager TotalPage="{Binding TotalPage}" 
+                     CurrentPage="{Binding CurrentPage, Mode=TwoWay}" 
+                     HorizontalAlignment="Center"
+                     Grid.Row="1">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="FirstPage">
+                        <i:InvokeCommandAction Command="{Binding FirstPageCommand}" />
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="PreviousPage">
+                        <i:InvokeCommandAction Command="{Binding PreviousPageCommand}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="NextPage">
+                        <i:InvokeCommandAction Command="{Binding NextPageCommand}" />
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="LastPage">
+                        <i:InvokeCommandAction Command="{Binding LastPageCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </local:Pager>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <DockPanel Grid.Row="0" HorizontalAlignment="Left">
+                <Button x:Name="Btn_ViewFile" Height="25" Background="Transparent" Cursor="Hand" BorderBrush="Transparent" Click="Btn_ViewFile_Click" Foreground="Black">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Image Source="Image/Icon_Preview.png" Stretch="Uniform"/>
+                        <TextBlock VerticalAlignment="Center" Text="预览" HorizontalAlignment="Left" Style="{StaticResource ResourceKey=dgCell}"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="Btn_DownloadFile" Height="25" Background="Transparent" Cursor="Hand" BorderBrush="Transparent" Click="Btn_DownloadFile_Click" Foreground="Black">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Image Source="Image/Icon_Download.png" Stretch="Uniform"/>
+                        <TextBlock VerticalAlignment="Center" Text="下载" HorizontalAlignment="Left" Style="{StaticResource ResourceKey=dgCell}"/>
+                    </StackPanel>
+                </Button>
+            </DockPanel>
+            <DockPanel Grid.Row="0" HorizontalAlignment="Right">
+                <Label Name="Lab_SaveDirectory"/>
+                <Button x:Name="Btn_Browse" Height="25" Background="Transparent" Cursor="Hand" BorderBrush="Transparent" Click="Btn_Browse_Click" Foreground="Black">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Image Source="Image/Icon_Browse.png" Stretch="Uniform"/>
+                        <TextBlock VerticalAlignment="Center" Text="浏览目录" HorizontalAlignment="Left" Style="{StaticResource ResourceKey=dgCell}"/>
+                    </StackPanel>
+                </Button>
+            </DockPanel>
+            <ListView Name="Lsv_File" Grid.Row="1" Grid.Column="0" MouseDoubleClick="Lsv_File_MouseDoubleClick" Background="Transparent" BorderThickness="0">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn>
+                            <GridViewColumn.Header>
+                                <CheckBox Name="Check_All" Content="全选" Cursor="Hand" IsChecked="{Binding Path=isCheckedAll}" Click="Check_All_Click"/>
+                            </GridViewColumn.Header>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox Name="Check_Single" Click="Check_Single_Click"  Tag="{Binding Path=rowIndex}" IsChecked="{Binding Path=checkBox_IsChecked}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="文件名" DisplayMemberBinding="{Binding Path=singleFile.fileOldName}"/>
+                        <GridViewColumn Header="大小" DisplayMemberBinding="{Binding Path=singleFile.fileSize}"/>
+                        <GridViewColumn Header="上传时间" DisplayMemberBinding="{Binding Path=singleFile.uploadTime}"/>
+                    </GridView>
+                </ListView.View>
+                <ListView.ContextMenu>
+                    <ContextMenu Name="Menu_Style">
+                        <MenuItem Header="预览" Click="MenuItem_View_Click"/>
+                        <MenuItem Header="下载" Click="MenuItem_Download_Click"/>
+                    </ContextMenu>
+                </ListView.ContextMenu>
+            </ListView>
+
+            <StackPanel Name="proBarFile" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Visibility="Hidden">
+                <local:ProbarRotate/>
+                <TextBlock Text="请稍候..." HorizontalAlignment="Center"/>
+            </StackPanel>
+            <Label Name="Lab_Exception" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" 
+                   Visibility="Hidden"/>
+        </Grid>
+
+        <Label Content="详细信息" FontSize="13" Grid.Column="2" VerticalContentAlignment="Center" BorderBrush="Transparent" Background="Transparent"/>
+
+        <ScrollViewer  Grid.Column="2" Grid.Row="1" VerticalAlignment="Top" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="10,10,0,0">
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="借款编号："/>
+                    <TextBlock Name="Tbk_DebtId"/>
+                </DockPanel>
+                <DockPanel HorizontalAlignment="Center">
+                    <Label Content="当前变更信息" FontSize="13" Grid.Column="2" Foreground="DarkMagenta"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="审核状态："/>
+                    <TextBlock Name="Tbk_Status" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="变更用户："/>
+                    <TextBlock Name="Tbk_OperatorId" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="变更金额：" Foreground="Red"/>
+                    <TextBlock Name="Tbk_ChangedAmount" Margin="10,0,0,0" Foreground="Red"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="变更还款方式："/>
+                    <TextBlock Name="Tbk_ChangedPayType" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="变更利率：" Foreground="Red"/>
+                    <TextBlock Name="Tbk_ChangedRate" Margin="10,0,0,0" Foreground="Red"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="变更日期："/>
+                    <TextBlock Name="Tbk_ChangedDate" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="变更申请时间："/>
+                    <TextBlock Name="Tbk_AppyTime" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="变更终贷日期："/>
+                    <TextBlock Name="Tbk_ChangedDebtEndTime" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="变更备注："/>
+                    <TextBlock Name="Tbk_ChangeRemark" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel HorizontalAlignment="Center">
+                    <Label Content="基础信息" FontSize="13" Grid.Column="2" Foreground="DarkBlue"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="原借款金额：" Foreground="Red"/>
+                    <TextBlock Name="Tbk_Amount" Margin="10,0,0,0" Foreground="Red"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="原审核状态："/>
+                    <TextBlock Name="Tbk_FormerStatus" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="借款申请时间："/>
+                    <TextBlock Name="Tbk_ApplyTime" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="起贷日期：" Foreground="Red"/>
+                    <TextBlock Name="Tbk_DebtStartTime" Margin="10,0,0,0" Foreground="Red"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="终贷日期："/>
+                    <TextBlock Name="Tbk_DebtEndTime" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="基准利率：" Foreground="Red"/>
+                    <TextBlock Name="Tbk_BaseInterestRate" Margin="10,0,0,0" Foreground="Red"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="利率浮动系数："/>
+                    <TextBlock Name="Tbk_RateRatio" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="利率调整方式："/>
+                    <TextBlock Name="Tbk_RateAdjustTypeName" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="还款方式："/>
+                    <TextBlock Name="Tbk_PayTypeName" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="借款单位："/>
+                    <TextBlock Name="Tbk_DebtUnitName" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="申请用户："/>
+                    <TextBlock Name="Tbk_ApplyUserId" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="借款类型："/>
+                    <TextBlock Name="Tbk_DebtType" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="债权单位名称："/>
+                    <TextBlock Name="Tbk_BondInstitutionName" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="关联银行："/>
+                    <TextBlock Name="Tbk_BankName" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="期限分类方式："/>
+                    <TextBlock Name="Tbk_TermClassificationName" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="增信方式："/>
+                    <TextBlock Name="Tbk_CreditUpdateName" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="进入政府债务系统：" TextWrapping = "Wrap" MaxWidth="85" Block.TextAlignment="Center"/>
+                    <TextBlock Name="Tbk_IsInGov" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                </DockPanel>
+                <DockPanel Margin="0,0,0,5">
+                    <TextBlock Text="备注："/>
+                    <TextBlock Name="Tbk_Remark" Margin="10,0,0,0" TextWrapping = "Wrap"/>
+                </DockPanel>
+            </StackPanel>
+        </ScrollViewer>
+        <Grid Grid.Row="2" Grid.Column="2" Margin="0,25,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="填写审核意见：" VerticalContentAlignment="Center" BorderBrush="Transparent" Background="Transparent" Grid.Row="0" Grid.ColumnSpan="3"/>
+            <TextBox Name="Tbx_Comment" Grid.Row="1" Grid.ColumnSpan="3" AcceptsReturn="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                         VerticalScrollBarVisibility="Visible" TextWrapping = "Wrap" Background="Transparent" BorderThickness="0"/>
+            <Button Name="Btn_PassItems" Grid.Row="2" Grid.Column="0" Content="通过申请" Click="Btn_PassItems_Click" Cursor="Hand" Foreground="Black"
+                    BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Button Name="Btn_RejectItems" Grid.Row="2" Grid.Column="1" Content="拒绝申请" Click="Btn_RejectItems_Click" Cursor="Hand" Foreground="Black"
+                    BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Button Name="Btn_SaveItems" Grid.Row="2" Grid.Column="2" Content="保存申请" Click="Btn_SaveItems_Click"  Cursor="Hand" Foreground="Black"
+                    BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Page>
